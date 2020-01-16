@@ -1,16 +1,16 @@
 import os
 import csv
 
-folder = "C:\\Users\\peter\\Documents\\Coding\\Amygda\\Smartavia Data\\fwdcfm56data"
+folder = "C:\\Users\\peter\\Documents\\Coding\\Amygda\\Redwings\\(fuel relevant) Engine Data for the period 1.1.-31.10.2019\\EHM\\BRW\\Новая папка (16)"
 delimiter = '#'
 
 def split_headers(headers: list):
     final_headers = []
     headers_str = ''.join(headers)
     headers_split = headers_str.split(delimiter)
-    # remove data type (?) headers
+    # remove what i think are the data type headers
     for header in headers_split:
-        if(len(header) == 1):
+        if(len(header) <= 1):
             continue
         else:
             final_headers.append(header)
